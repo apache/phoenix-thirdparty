@@ -25,12 +25,12 @@
     <groupId>org.apache.phoenix.thirdparty</groupId>
     <artifactId>phoenix-thirdparty</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <relativePath>..</relativePath>
   </parent>
-
-  <artifactId>phoenix-shaded-guava</artifactId>
-  <name>Apache Phoenix Relocated (Shaded) Guava</name>
+  <artifactId>phoenix-shaded-protobuf</artifactId>
+  <name>Apache Phoenix Relocated (Shaded) Protobuf</name>
   <description>
-    Pulls down Guava, relocates it and then makes a new jar with it.
+    Pulls down protobuf, relocates it and then makes a new jar with it.
   </description>
 
   <build>
@@ -62,21 +62,10 @@
               <createSourcesJar>true</createSourcesJar>
               <relocations>
                 <relocation>
-                  <pattern>com.google</pattern>
-                  <shadedPattern>${rename.offset}.com.google</shadedPattern>
+                  <pattern>com.google.protobuf</pattern>
+                  <shadedPattern>${rename.offset}.com.google.protobuf</shadedPattern>
                 </relocation>
               </relocations>
-                <excludes>
-                  <!-- Everything here needs to be excluded from the jar that pulls it in
-                      also else we give an odd signal in the META-INF/DEPENDENCIES that we
-                      produce. See below for how to exclusion of transitive dependencies.
-                    -->
-                  <exclude>com.google.code.findbugs:jsr305</exclude>
-                  <exclude>com.google.errorprone:error_prone_annotations</exclude>
-                  <exclude>com.google.j2objc:j2objc-annotations</exclude>
-                  <exclude>org.codehaus.mojo:animal-sniffer-annotations</exclude>
-                  <exclude>org.checkerframework:*</exclude>
-                </excludes>
               <artifactSet>
               </artifactSet>
               <transformers>
@@ -94,36 +83,9 @@
   </build>
   <dependencies>
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>${guava.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.google.code.findbugs</groupId>
-          <artifactId>jsr305</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.google.errorprone</groupId>
-          <artifactId>error_prone_annotations</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.google.j2objc</groupId>
-          <artifactId>j2objc-annotations</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>animal-sniffer-annotations</artifactId>
-        </exclusion>
-        <!-- Just an empty jar-->
-        <exclusion>
-          <groupId>com.google.guava</groupId>
-          <artifactId>listenablefuture</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.checkerframework</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${protobuf.version}</version>
     </dependency>
   </dependencies>
 </project>

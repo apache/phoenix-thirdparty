@@ -50,6 +50,7 @@
 
   <modules>
     <module>phoenix-shaded-guava</module>
+    <module>phoenix-shaded-protobuf</module>
   </modules>
 
   <scm>
@@ -68,6 +69,7 @@
   <properties>
     <rename.offset>org.apache.phoenix.thirdparty</rename.offset>
     <guava.version>29.0-android</guava.version>
+    <protobuf.version>2.5.0</protobuf.version>
   </properties>
 
   <build>
