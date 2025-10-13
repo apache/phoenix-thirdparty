@@ -28,7 +28,7 @@
 
   <groupId>org.apache.phoenix.thirdparty</groupId>
   <artifactId>phoenix-thirdparty</artifactId>
-  <version>2.1.1-SNAPSHOT</version>
+  <version>2.2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Apache Phoenix Third-Party Libs</name>
   <description>Packaging of relocated (renamed, shaded) third-party libraries used by Phoenix.</description>
@@ -51,6 +51,7 @@
   <modules>
     <module>phoenix-shaded-guava</module>
     <module>phoenix-shaded-commons-cli</module>
+    <module>phoenix-shaded-protobuf</module>
   </modules>
 
   <scm>
@@ -63,6 +64,7 @@
     <rename.offset>org.apache.phoenix.thirdparty</rename.offset>
     <guava.version>32.1.3-jre</guava.version>
     <commons-cli.version>1.9.0</commons-cli.version>
+    <protobuf.version>4.32.0</protobuf.version>
   </properties>
 
   <build>
