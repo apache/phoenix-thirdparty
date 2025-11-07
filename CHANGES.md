@@ -18,6 +18,36 @@
 -->
 # PHOENIX Changelog
 
+## Release thirdparty-2.2.0 - Unreleased (as of 2025-11-07)
+
+
+
+### NEW FEATURES:
+
+| JIRA | Summary | Priority | Component |
+|:---- |:---- | :--- |:---- |
+| [PHOENIX-7693](https://issues.apache.org/jira/browse/PHOENIX-7693) | Add shaded protobuf module to phoenix-thirdparty |  Major | phoenix |
+
+
+### IMPROVEMENTS:
+
+| JIRA | Summary | Priority | Component |
+|:---- |:---- | :--- |:---- |
+| [PHOENIX-7613](https://issues.apache.org/jira/browse/PHOENIX-7613) | Update Apache parent pom to 31 |  Minor | core, queryserver, thirdparty |
+| [PHOENIX-7712](https://issues.apache.org/jira/browse/PHOENIX-7712) | Update commons-cli to 1.10.0 in phoenix-thirdparty |  Major | thirdparty |
+| [PHOENIX-7713](https://issues.apache.org/jira/browse/PHOENIX-7713) | Update Guava to 33.4.8-jre in phoenix-thirdparty |  Major | thirdparty |
+| [PHOENIX-7450](https://issues.apache.org/jira/browse/PHOENIX-7450) | Update commons-cli to 1.9 in phoenix-thirdparty |  Minor | thirdparty |
+
+
+### BUG FIXES:
+
+| JIRA | Summary | Priority | Component |
+|:---- |:---- | :--- |:---- |
+| [PHOENIX-7628](https://issues.apache.org/jira/browse/PHOENIX-7628) | Don't add Apache Snapshot Maven Repo by Default |  Major | . |
+| [PHOENIX-7488](https://issues.apache.org/jira/browse/PHOENIX-7488) | Use central repo, not repository.apache.org |  Major | connectors, omid, phoenix, thirdparty |
+
+
+
 ## Release thirdparty-2.1.0 - Unreleased (as of 2023-12-13)
 
 

@@ -16,6 +16,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 -->
+# PHOENIX  thirdparty-2.2.0 Release Notes
+
+These release notes cover new developer and user-facing incompatibilities, important issues, features, and major improvements.
+
+
+---
+
+* [PHOENIX-7693](https://issues.apache.org/jira/browse/PHOENIX-7693) | *Major* | **Add shaded protobuf module to phoenix-thirdparty**
+
+phoenix-thirdparty now includes a relocated protbuf-java library.
+
+This library is is meant to be used by Omid to isolate its protobuf version from others on the classpath.
+
+
+
 # PHOENIX  thirdparty-2.1.0 Release Notes
 
 These release notes cover new developer and user-facing incompatibilities, important issues, features, and major improvements.
